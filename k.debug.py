@@ -89,7 +89,7 @@ def getBody(ourl):
             open(url.netloc+'.html',"w+").write(bodinya)
         elif re.search("smtp.mailgun", bodinya):
             print "K.DEBUG > ", ourl
-            open('mailgin_'+url.netloc+'.html',"w+").write(bodinya)
+            open('mailgun_'+url.netloc+'.html',"w+").write(bodinya)
         elif re.search("smtp.sendgrid", bodinya):
             print "K.DEBUG > ", ourl
             open('sendgrid_'+url.netloc+'.html',"w+").write(bodinya)
